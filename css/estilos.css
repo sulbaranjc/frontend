@@ -21,13 +21,13 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.hm-wrapper{
+/* .hm-wrapper{
     position: relative;
-}
-
+} */
+/* 
 .hm-wrapper, body{
     min-height: 100%;
-}
+} */
 
 a{
     text-decoration: none;
@@ -644,7 +644,7 @@ footer .foo-row .foo-col ul li a:hover{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 300px){
     .hm-banner{
         height: 320px;
         min-height: 320px;
@@ -669,3 +669,20 @@ footer .foo-row .foo-col ul li a:hover{
 
     
 }
+
+.card-fixed-height {
+    height: 800px; /* Ajusta la altura a tu preferencia */
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-body {
+    flex-grow: 1;
+  }
+  
+  
+  
+  
+  
+  
