@@ -50,7 +50,7 @@ img{
 }
 
 .container{
-    width: 1122px;
+    width: 1422px ;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -58,7 +58,7 @@ img{
 @media screen and (min-width: 1px){
     .container{
         width: auto;
-        max-width: 1122px !important;
+        max-width: 1422px !important;
     }
 }
 
