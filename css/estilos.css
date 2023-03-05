@@ -107,16 +107,17 @@ img{
 
 .hm-header{
     position: relative;
-    height: 64px;
+    height: 90px;
     background: #fff;
-    line-height: 64px;
+    line-height: 100px;
     -webkit-transition: all .6s ease-in-out;
     -moz-transition: all .6s ease-in-out;
     -ms-transition: all .6s ease-in-out;
     -o-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 0px;
     box-sizing: border-box;
 }
 .hm-header .container{
@@ -222,26 +223,6 @@ img{
 }
 
 
-/*=================================
-    ESTILOS: categorias home
-==================================*/
-.hm-page-block{
-    position: relative;
-    padding: 60px 0px;
-}
-
-.header-title{
-    margin-bottom: 50px;
-}
-
-.header-title h1{
-    color: var(--color-negro);
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    padding-bottom: 16px;
-}
 
 .header-title h1::after{
     content: '';
@@ -306,38 +287,7 @@ img{
 }
 
 
-/*=================================
-    ESTILOS: Productos destacados
-==================================*/
 
-.hm-tabs{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.hm-tabs .hm-tab-link{
-    margin: 0px 20px;
-    background: #fff;
-    border:1px solid #EEF5F9;
-    padding: 10px 30px;
-    border-radius: 22px;
-    color: #7C807E;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.hm-tabs .hm-tab-link.active,
-.hm-tabs .hm-tab-link:hover{
-    background: var(--color-principal);
-    color: #fff;
-}
-
-.hm-tabs .hm-tab-link.active .tabs-content{
-    background: red;
-}
 /* CONTENIDO TABs */
 .tabs-content{
     display: none;
