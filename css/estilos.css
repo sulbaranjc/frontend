@@ -230,16 +230,6 @@ img{
 }
 
 
-/* CONTENIDO TABs */
-.tabs-content{
-    display: none;
-    padding-top: 50px;
-}
-
-.tabs-content.tab-active{
-    display: block;
-}
-
 
 
 /*=================================
