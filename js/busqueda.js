@@ -5,13 +5,20 @@ let cartCountElement = document.getElementById("cart-count");
 // Actualiza el contenido del elemento <span> con el nuevo valor del contador
 cartCountElement.innerHTML = cartCount;
 
-function actualizarContadorCarrito() {
-  
-    // Obtiene el valor actual del contador y lo convierte a un número entero
+
+
+
+
+function actualizarContadorCarrito(id) {
+
+// Obtiene el elemento de cantidad de card"
+let cartCantElement = parseInt(document.getElementById(id).value); 
+
+// Obtiene el valor actual del contador y lo convierte a un número entero
     let cartCount = parseInt(cartCountElement.innerHTML);
   
     // Actualiza el contador sumando 1 al valor actual
-    cartCount += 1;
+    cartCount += cartCantElement
   
     // Actualiza el contenido del elemento <span> con el nuevo valor del contador
     cartCountElement.innerHTML = cartCount;
@@ -21,7 +28,8 @@ function actualizarContadorCarrito() {
 // Hacer la llamada fetch con async/await
 
 async function getImages() {
-    const URI = 'http://sulbaranjc.com:3311/';
+    // const URI = 'http://sulbaranjc.com:3311/';
+    const URI = 'http://localhost:3310/';
     const URIFETCH = `${URI}images`;
   try {
       const response = await fetch(URIFETCH);
@@ -32,7 +40,7 @@ async function getImages() {
       images.forEach(image => {
           const card = `
               <div class="d-flex justify-content-center align-items-center mx-2 pt-5">
-                  <div class="card mb-4" style="width: 21rem; height: 45rem;">
+                  <div class="card mb-4" style="width: 21rem; height: 50rem;">
                       <img class="card-img-top mx-auto pt-2 " src=${URI}${image.namefile} alt="${image.titulo}" style="width: 19.8rem; height: 22rem; border-radius: 15px;
                       ">
                       <div class="card-body">
@@ -40,10 +48,12 @@ async function getImages() {
                           <p class="card-text">${image.descripcion}</p>
                           <p class="card-text">Precio: $${image.precio}</p>
                           <p class="card-text">Existencia: ${image.existencia}</p>
+                          <label for="quantity">Cantidad:</label>
+                          <input type="number" id=${image.id}  name="cantidad" min="0" max="100" step="1">
                       </div>
                       <div class="card-body d-flex align-items-end">
                       <button type="button" 
-                        class="btn btn btn-warning d-block mx-auto mb-3" onclick="actualizarContadorCarrito()">Añadir a la cesta</button>
+                        class="btn btn btn-warning d-block mx-auto mb-3" onclick="actualizarContadorCarrito(${image.id})">Añadir a la cesta</button>
                   </div> 
 
                   </div>
