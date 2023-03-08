@@ -1,16 +1,14 @@
 // Declara una variable entera
-var cartCount = 0;
+let cartCount = 0;
 // Obtiene el elemento <span> con id "cart-count"
-var cartCountElement = document.getElementById("cart-count"); 
+let cartCountElement = document.getElementById("cart-count"); 
 // Actualiza el contenido del elemento <span> con el nuevo valor del contador
 cartCountElement.innerHTML = cartCount;
 
 function actualizarContadorCarrito() {
-    // Obtiene el elemento <span> con id "cart-count"
-    var cartCountElement = document.getElementById("cart-count");
   
     // Obtiene el valor actual del contador y lo convierte a un número entero
-    var cartCount = parseInt(cartCountElement.innerHTML);
+    let cartCount = parseInt(cartCountElement.innerHTML);
   
     // Actualiza el contador sumando 1 al valor actual
     cartCount += 1;
